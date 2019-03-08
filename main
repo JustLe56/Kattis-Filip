@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int input1, input2,counter=0,newInput1=0,newInput2=0;
+  cin >> input1 >> input2;
+  int x = 0,x2 = 0;
+  int charArray[3];
+  int charArray2[3]; 
+
+  while (input1 > 0 && input2 > 0) 
+  { 
+      charArray[x++] = input1 % 10;
+      charArray2[x2++] = input2 % 10;
+      input1 /= 10; 
+      input2 /= 10;
+  }
+  newInput1 = (charArray[0]*100) +(charArray[1] * 10) + (charArray[2] * 1);
+  newInput2 = (charArray2[0]*100) +(charArray2[1] * 10) + (charArray2[2] * 1);
+  if (newInput1 > newInput2)
+  {
+    cout << newInput1;
+  }
+  else
+    cout << newInput2;
+}
